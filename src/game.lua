@@ -17,8 +17,6 @@ function Game:new()
 end
 
 function Game:draw()
-	love.graphics.print(self.sceneManager:getGameSceneIndex(), 100, 100)
-
 	-- debug
 	if self.sceneManager:getGameSceneIndex() == GAMEPLAY_INDEX then
 		local keyStates = self.gameplayManager:getKeyStates()
@@ -29,7 +27,7 @@ function Game:draw()
 		end
 	end
 
-	-- self.sceneManager:draw()
+	self.sceneManager:draw()
 end
 
 function Game:update() end
