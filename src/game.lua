@@ -1,5 +1,6 @@
 local SceneManager = require("src.scene_manager")
 local GameplayManager = require("src.gameplay_manager")
+local SettingManager = require("src.setting_manager")
 
 local Game = {}
 
@@ -7,6 +8,7 @@ function Game:new()
 	local o = {
 		sceneManager = SceneManager:new(),
 		gameplayManager = GameplayManager:new(),
+		settingManager = SettingManager:load(),
 	}
 	setmetatable(o, self)
 	self.__index = self
@@ -38,7 +40,7 @@ function Game:keyEvent(key, isPressed)
 	elseif self.sceneManager:getGameSceneIndex() == GAMEPLAY_INDEX then -- gameplay
 		self.gameplayManager:updateKeyStates(key, isPressed)
 	elseif self.sceneManager:getGameSceneIndex() == SETTINGS_INDEX then -- settings
-		print("within settings scene")
+		self.settingManager:keyEvent(key)
 	end
 end
 
