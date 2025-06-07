@@ -1,3 +1,4 @@
+require("src.scene_indices_enum")
 local Game = require("src.game")
 
 function love.load()
