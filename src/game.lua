@@ -1,6 +1,6 @@
-local SceneManager = require("src.scene_manager")
-local GameplayManager = require("src.gameplay_manager")
-local SettingManager = require("src.setting_manager")
+local SceneManager = require("src.managers.scene_manager")
+local GameplayManager = require("src.managers.gameplay_manager")
+local SettingManager = require("src.managers.setting_manager")
 
 local Game = {}
 
