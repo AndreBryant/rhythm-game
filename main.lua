@@ -1,12 +1,12 @@
-require("src.constants")
-local Game = require("src.game")
+require("src.constants.index")
+local RhythmGame = require("src.rhythm_game")
 
 function love.load()
-	game = Game:new()
+	game = RhythmGame:new()
 end
 
 function love.update(dt)
-	game:update()
+	game:update(dt)
 end
 
 function love.draw()

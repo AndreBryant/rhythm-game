@@ -1,0 +1,6 @@
+require("src.constants.scene_indixes")
+require("src.constants.difficulty_levels")
+require("src.constants.gameplay")
+require("src.constants.unchangeable-keybinds.keyboard_gameplay_controls")
+require("src.constants.unchangeable-keybinds.keyboard_menu_controls")
+require("src.constants.unchangeable-keybinds.keyboard_settings_controls")

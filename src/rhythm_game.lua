@@ -1,10 +1,11 @@
-local SceneManager = require("src.managers.scene_manager")
-local GameplayManager = require("src.managers.gameplay_manager")
-local SettingManager = require("src.managers.setting_manager")
+local Managers = require("src.managers.index")
+local SceneManager = Managers.SceneManager
+local GameplayManager = Managers.GameplayManager
+local SettingManager = Managers.SettingManager
 
-local Game = {}
+local RhythmGame = {}
 
-function Game:new()
+function RhythmGame:new()
 	local o = {
 		sceneManager = SceneManager:new(),
 		gameplayManager = GameplayManager:new(),
@@ -16,7 +17,7 @@ function Game:new()
 	return o
 end
 
-function Game:draw()
+function RhythmGame:draw()
 	-- debug
 	if self.sceneManager:getGameSceneIndex() == GAMEPLAY_INDEX then
 		local keyStates = self.gameplayManager:getKeyStates()
@@ -30,9 +31,9 @@ function Game:draw()
 	self.sceneManager:draw()
 end
 
-function Game:update() end
+function RhythmGame:update(dt) end
 
-function Game:keyEvent(key, isPressed)
+function RhythmGame:keyEvent(key, isPressed)
 	if self.sceneManager:getGameSceneIndex() == MENU_INDEX then -- menu
 		self.sceneManager:updateSceneIndex(key)
 	elseif self.sceneManager:getGameSceneIndex() == GAMEPLAY_INDEX then -- gameplay
@@ -42,4 +43,4 @@ function Game:keyEvent(key, isPressed)
 	end
 end
 
-return Game
+return RhythmGame

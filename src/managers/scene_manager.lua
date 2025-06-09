@@ -21,12 +21,12 @@ function SceneManager:draw()
 end
 
 function SceneManager:updateSceneIndex(key)
-	if key == "space" then
-		self.game_scene_index = MENU_INDEX
-	elseif key == "p" then
+	if key == MENU_TO_GAMEPLAY then
 		self.game_scene_index = GAMEPLAY_INDEX
-	elseif key == "s" then
+	elseif key == MENU_TO_SETTINGS then
 		self.game_scene_index = SETTINGS_INDEX
+	elseif key == MENU_TO_EXIT and self.game_scene_index == MENU_INDEX then
+		love.event.quit()
 	end
 end
 
