@@ -20,6 +20,8 @@ function SceneManager:draw()
 	self.scenes[self.game_scene_index]()
 end
 
+function SceneManager:update() end
+
 function SceneManager:updateSceneIndex(key)
 	if key == MENU_TO_GAMEPLAY then
 		self.game_scene_index = GAMEPLAY_INDEX

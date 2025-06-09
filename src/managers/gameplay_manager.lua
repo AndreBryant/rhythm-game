@@ -16,8 +16,23 @@ function GameplayManager:new(diff)
 	return o
 end
 
+function GameplayManager:drawGameplay()
+	love.graphics.print("gameplay", 100, 100)
+	love.graphics.print("score: " .. self.player:getScore(), 100, 120)
+
+	love.graphics.print("Current Time: " .. self.conductor:getPointerTime(), 100, 140)
+end
+
+function GameplayManager:update(dt)
+	self.conductor:updatePointerTime(dt)
+end
+
 function GameplayManager:updateKeyStates(key, isPressed)
 	self.keyStates[key] = isPressed
+
+	if isPressed and key == "space" then
+		self.player:addScore(1)
+	end
 end
 
 function GameplayManager:getKeyStates()

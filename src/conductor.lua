@@ -13,7 +13,11 @@ function Conductor:new(tempo, offset)
 end
 
 function Conductor:updatePointerTime(dt)
-	self.currentTime = self.currentTime + dt
+	self.pointerTime = self.pointerTime + dt
+end
+
+function Conductor:getPointerTime()
+	return self.pointerTime
 end
 
 function Conductor:updateCurrentTempo(tempo)

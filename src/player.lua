@@ -19,4 +19,8 @@ function Player:penalize(decrement)
 	self.score = self.score - decrement
 end
 
+function Player:getScore()
+	return self.score
+end
+
 return Player

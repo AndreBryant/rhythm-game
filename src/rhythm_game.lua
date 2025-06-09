@@ -29,9 +29,28 @@ function RhythmGame:draw()
 	end
 
 	self.sceneManager:draw()
+	-- self.gameplayManager:drawGameplay()
+
+	local index = self.sceneManager:getGameSceneIndex()
+
+	if index == MENU_INDEX then -- menu
+		-- self.sceneManager:update()
+	elseif index == GAMEPLAY_INDEX then -- gameplay
+		self.gameplayManager:drawGameplay()
+	elseif index == SETTINGS_INDEX then -- settings
+	end
 end
 
-function RhythmGame:update(dt) end
+function RhythmGame:update(dt)
+	local index = self.sceneManager:getGameSceneIndex()
+
+	if index == MENU_INDEX then -- menu
+		-- self.sceneManager:update()
+	elseif index == GAMEPLAY_INDEX then -- gameplay
+		self.gameplayManager:update(dt)
+	elseif index == SETTINGS_INDEX then -- settings
+	end
+end
 
 function RhythmGame:keyEvent(key, isPressed)
 	if self.sceneManager:getGameSceneIndex() == MENU_INDEX then -- menu
