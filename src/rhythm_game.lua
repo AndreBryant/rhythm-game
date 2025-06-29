@@ -29,7 +29,6 @@ function RhythmGame:draw()
 	end
 
 	self.sceneManager:draw()
-	-- self.gameplayManager:drawGameplay()
 
 	local index = self.sceneManager:getGameSceneIndex()
 

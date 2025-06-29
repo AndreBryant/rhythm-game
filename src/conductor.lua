@@ -24,4 +24,8 @@ function Conductor:updateCurrentTempo(tempo)
 	self.tempo = tempo
 end
 
+function Conductor:getCurrentTempo()
+	return self.tempo
+end
+
 return Conductor

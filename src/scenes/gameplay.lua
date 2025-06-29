@@ -1,5 +1,7 @@
 local function drawGameplay()
-	love.graphics.print("gameplay", 100, 100)
+	-- THis does nothign pretty much
+
+	love.graphics.print("This does nothing", 100, 100)
 end
 
 return drawGameplay
