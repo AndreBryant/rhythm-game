@@ -2,6 +2,7 @@ local Conductor = {}
 
 function Conductor:new(tempo, offset)
 	local o = {
+
 		tempo = tempo,
 		offset = offset,
 		pointerTime = -START_TIME_OFFSET,

@@ -1,5 +1,5 @@
-local Player = require("src.player")
-local Conductor = require("src.conductor")
+local Player = require("src.managers.gameplay_classes.player")
+local Conductor = require("src.managers.gameplay_classes.conductor")
 
 local GameplayManager = {}
 
