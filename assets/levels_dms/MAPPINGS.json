@@ -1,17 +1,3 @@
-# Software Used
-
-**OS:** Windows
-**MIDI Editor:** Domino
-
-## Mappings
-
-Here are the key mappings for the notes (not necessarily the same pitch in the song)
-
-```
-<_space> = _sustain = C3
-```
-
-```json
 {
   "Q": "C4",
   "A": "C#4",
@@ -40,4 +26,3 @@ Here are the key mappings for the notes (not necessarily the same pitch in the s
   "O": "C6",
   "P": "C#6"
 }
-```

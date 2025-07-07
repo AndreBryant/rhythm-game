@@ -15,6 +15,8 @@ local luaMidi = require("lib.luamidi.LuaMidi")
 -- return MIDIParser
 
 local function parse(midiPath)
+	local path = "assets.levels_dms.tester.mid"
+
 	local parsedData = {}
 	local tracks = luaMidi.get_MIDI_tracks(midiPath)
 	for key, value in pairs(tracks) do
