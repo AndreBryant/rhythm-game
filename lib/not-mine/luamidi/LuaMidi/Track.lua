@@ -6,10 +6,10 @@
 -- @license MIT
 -------------------------------------------------
 
-local Constants = require("lib.luamidi.LuaMidi.Constants")
-local Util = require("lib.luamidi.LuaMidi.Util")
-local MetaEvent = require("lib.luamidi.LuaMidi.MetaEvent")
-local ArbitraryEvent = require("lib.luamidi.LuaMidi.ArbitraryEvent")
+local Constants = require("lib.not-mine.luamidi.LuaMidi.Constants")
+local Util = require("lib.not-mine.luamidi.LuaMidi.Util")
+local MetaEvent = require("lib.not-mine.luamidi.LuaMidi.MetaEvent")
+local ArbitraryEvent = require("lib.not-mine.luamidi.LuaMidi.ArbitraryEvent")
 
 local Track = {}
 
@@ -219,11 +219,19 @@ function Track:set_key_signature(sf, mi)
 	local key_sig
 	do
 		local majmin = { "major", "minor" }
-		local keys =
-			{ { "C", "A" }, { "G", "E" }, { "D", "B" }, { "A", "F#" }, { "E", "C#" }, { "B", "G#" }, { "F#", "D#" }, {
+		local keys = {
+			{ "C", "A" },
+			{ "G", "E" },
+			{ "D", "B" },
+			{ "A", "F#" },
+			{ "E", "C#" },
+			{ "B", "G#" },
+			{ "F#", "D#" },
+			{
 				"C#",
 				"A#",
-			} }
+			},
+		}
 		local sharps_num = tostring(Util.number_from_bytes({ sf }))
 		key_sig = sharps_num .. "#"
 		key_sig = key_sig

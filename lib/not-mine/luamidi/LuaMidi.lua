@@ -11,17 +11,17 @@
 
 local LuaMidi = {}
 
-LuaMidi.Util = require("lib.luamidi.LuaMidi.Util")
-LuaMidi.Chunk = require("lib.luamidi.LuaMidi.Chunk")
-LuaMidi.Track = require("lib.luamidi.LuaMidi.Track")
-LuaMidi.Writer = require("lib.luamidi.LuaMidi.Writer")
-LuaMidi.Constants = require("lib.luamidi.LuaMidi.Constants")
-LuaMidi.MetaEvent = require("lib.luamidi.LuaMidi.MetaEvent")
-LuaMidi.NoteEvent = require("lib.luamidi.LuaMidi.NoteEvent")
-LuaMidi.NoteOnEvent = require("lib.luamidi.LuaMidi.NoteOnEvent")
-LuaMidi.NoteOffEvent = require("lib.luamidi.LuaMidi.NoteOffEvent")
-LuaMidi.ArbitraryEvent = require("lib.luamidi.LuaMidi.ArbitraryEvent")
-LuaMidi.ProgramChangeEvent = require("lib.luamidi.LuaMidi.ProgramChangeEvent")
+LuaMidi.Util = require("lib.not-mine.luamidi.LuaMidi.Util")
+LuaMidi.Chunk = require("lib.not-mine.luamidi.LuaMidi.Chunk")
+LuaMidi.Track = require("lib.not-mine.luamidi.LuaMidi.Track")
+LuaMidi.Writer = require("lib.not-mine.luamidi.LuaMidi.Writer")
+LuaMidi.Constants = require("lib.not-mine.luamidi.LuaMidi.Constants")
+LuaMidi.MetaEvent = require("lib.not-mine.luamidi.LuaMidi.MetaEvent")
+LuaMidi.NoteEvent = require("lib.not-mine.luamidi.LuaMidi.NoteEvent")
+LuaMidi.NoteOnEvent = require("lib.not-mine.luamidi.LuaMidi.NoteOnEvent")
+LuaMidi.NoteOffEvent = require("lib.not-mine.luamidi.LuaMidi.NoteOffEvent")
+LuaMidi.ArbitraryEvent = require("lib.not-mine.luamidi.LuaMidi.ArbitraryEvent")
+LuaMidi.ProgramChangeEvent = require("lib.not-mine.luamidi.LuaMidi.ProgramChangeEvent")
 
 -------------------------------------------------
 --- Functions
