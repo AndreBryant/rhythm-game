@@ -6,7 +6,7 @@ local convert = xmlParser.convert
 -- local RhythmGame = require("src.rhythm_game")
 
 function love.load()
-	parse("assets.levels_xml.test-level.xml")
+	parse()
 	-- game = RhythmGame:new()
 end
 
