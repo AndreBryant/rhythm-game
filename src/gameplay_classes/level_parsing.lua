@@ -1,8 +1,8 @@
 local function bubbleSort(left, right)
-	if left.startMeasure == right.startMeaseure then
+	if left.startMeasure == right.startMeasure then
 		return left.startStep < right.startStep
 	else
-		return left.startMeasure < right.startMeaseure
+		return left.startMeasure < right.startMeasure
 	end
 end
 
@@ -20,11 +20,14 @@ local function parse(path)
 	end
 
 	local trackList = jsonData.BeatMap.Map.Track
-	local data = {}
-
+	local data = { tracks = {} }
 	for i, track in ipairs(trackList) do
-		table.sort(track, bubbleSort)
+		if track.Notes then
+			table.sort(track.Notes, bubbleSort)
+		end
 	end
+
+	data.tracks = tracklist
 
 	for i, note in ipairs(trackList[1].Notes) do
 		print(

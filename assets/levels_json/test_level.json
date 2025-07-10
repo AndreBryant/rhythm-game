@@ -23,7 +23,7 @@
               "type": "0",
               "key": "a",
               "startMeasure": "1",
-              "startStep": "0",
+              "startStep": "2",
               "endMeasure": "0",
               "endStep": "48"
             },
@@ -31,7 +31,7 @@
               "type": "0",
               "key": "a",
               "startMeasure": "1",
-              "startStep": "2",
+              "startStep": "0",
               "endMeasure": "0",
               "endStep": "48"
             }
