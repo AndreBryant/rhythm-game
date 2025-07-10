@@ -5,56 +5,78 @@
       "Artist": "W.A. Mozart",
       "BeatMapAuthor": "Andre Bryant",
       "Difficulty": "Easy",
-      "PPQ": "96",
-      "Tempo": "120"
+      "PPQ": "96"
     },
     "Map": {
       "Track": [
         {
-          "id": "0",
-          "Note": {
-            "type": "0",
-            "key": "a",
-            "startMeasure": "0",
-            "startStep": "0",
-            "endMeasure": "0",
-            "endStep": "48"
-          }
+          "Notes": [
+            {
+              "type": "0",
+              "key": "a",
+              "startMeasure": "0",
+              "startStep": "0",
+              "endMeasure": "0",
+              "endStep": "48"
+            },
+            {
+              "type": "0",
+              "key": "a",
+              "startMeasure": "1",
+              "startStep": "0",
+              "endMeasure": "0",
+              "endStep": "48"
+            },
+            {
+              "type": "0",
+              "key": "a",
+              "startMeasure": "1",
+              "startStep": "2",
+              "endMeasure": "0",
+              "endStep": "48"
+            }
+          ]
         },
         {
-          "id": "1",
-          "Note": {
-            "type": "0",
-            "key": "d",
-            "startMeasure": "0",
-            "startStep": "0",
-            "endMeasure": "0",
-            "endStep": "48"
-          }
+          "Notes": [
+            {
+              "type": "0",
+              "key": "d",
+              "startMeasure": "0",
+              "startStep": "0",
+              "endMeasure": "0",
+              "endStep": "48"
+            }
+          ]
         },
         {
-          "id": "2",
-          "Note": {
-            "type": "0",
-            "key": "g",
-            "startMeasure": "0",
-            "startStep": "0",
-            "endMeasure": "0",
-            "endStep": "48"
-          }
+          "Notes": [
+            {
+              "type": "0",
+              "key": "g",
+              "startMeasure": "0",
+              "startStep": "0",
+              "endMeasure": "0",
+              "endStep": "48"
+            }
+          ]
         },
         {
-          "id": "3",
-          "Note": {
-            "type": "0",
-            "key": "j",
-            "startMeasure": "0",
-            "startStep": "0",
-            "endMeasure": "0",
-            "endStep": "48"
-          }
+          "Notes": [
+            {
+              "type": "0",
+              "key": "j",
+              "startMeasure": "0",
+              "startStep": "0",
+              "endMeasure": "0",
+              "endStep": "48"
+            }
+          ]
         }
-      ]
+      ],
+      "TempoTrack": [],
+
+      "SustainTrack": []
     }
   }
 }

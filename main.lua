@@ -1,12 +1,14 @@
 require("src.constants.index")
-local xmlParser = require("lib.xml-parser.index")
+local xmlParser = require("src.gameplay_classes.level_parsing")
 local parse = xmlParser.parse
 local convert = xmlParser.convert
 
 -- local RhythmGame = require("src.rhythm_game")
 
 function love.load()
-	parse()
+	local path = "assets/levels_json/test_level.json"
+
+	parse(path)
 	-- game = RhythmGame:new()
 end
 
