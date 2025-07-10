@@ -1,16 +1,16 @@
 {
-  "BeatMap": {
-    "MetaData": {
+  "beatMap": {
+    "metaData": {
       "Title": "Twinkle twinkle Little Star",
       "Artist": "W.A. Mozart",
       "BeatMapAuthor": "Andre Bryant",
       "Difficulty": "Easy",
       "PPQ": "96"
     },
-    "Map": {
-      "Track": [
+    "map": {
+      "trackList": [
         {
-          "Notes": [
+          "notes": [
             {
               "type": "0",
               "key": "a",
@@ -38,7 +38,7 @@
           ]
         },
         {
-          "Notes": [
+          "notes": [
             {
               "type": "0",
               "key": "d",
@@ -50,7 +50,7 @@
           ]
         },
         {
-          "Notes": [
+          "notes": [
             {
               "type": "0",
               "key": "g",
@@ -62,7 +62,7 @@
           ]
         },
         {
-          "Notes": [
+          "notes": [
             {
               "type": "0",
               "key": "j",
@@ -74,9 +74,9 @@
           ]
         }
       ],
-      "TempoTrack": [],
+      "tempoTrack": [],
 
-      "SustainTrack": []
+      "sustainTrack": []
     }
   }
 }
