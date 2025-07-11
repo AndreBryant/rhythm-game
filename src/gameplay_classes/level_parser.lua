@@ -21,7 +21,7 @@ end
 
 local function parse(path)
 	-- Import json parsing library
-	local json = require("lib.not-mine.dkjson")
+	local json = require("lib.open-source.dkjson")
 
 	-- Handle if love camt find file
 	local content, err = love.filesystem.read(path)
