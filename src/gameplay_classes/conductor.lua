@@ -7,7 +7,7 @@ function Conductor:new(tempo, offset)
 		offset = offset,
 		pointerTime = -START_TIME_OFFSET,
 		tolerance = 5, -- how much a beat can deviate
-		beatMap = nil,
+		beatmap = nil,
 	}
 	setmetatable(o, self)
 	self.__index = self
@@ -35,10 +35,14 @@ function Conductor:parseBeatmap(path)
 	local parsedData = levelParser(path)
 
 	if parsedData.success then
-		self.beatMap = parsedData.data
+		self.beatmap = parsedData.data
 	end
 
 	return parsedData.message
+end
+
+function Conductor:getBeatmapMeta()
+	return self.beatmap.metadata
 end
 
 return Conductor

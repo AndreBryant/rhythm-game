@@ -5,6 +5,10 @@
 ---
 --- Improvements:
 --- Use faster sorting algorithm instead of bubble sort
+---
+--- TODO:
+--- - TempoTrack
+--- - Sustain Track
 ---------------------
 
 local function bubbleSort(left, right)
@@ -32,12 +36,12 @@ local function parse(path)
 	end
 
 	local data = { metadata = {}, tracks = {} }
-	local metadata = jsonData.beatMap.metadata
+	local metadata = jsonData.beatmap.metadata
 
 	data.metadata = metadata
 
 	-- Make sure notes are sorted properly in the list
-	local trackList = jsonData.beatMap.map.trackList
+	local trackList = jsonData.beatmap.map.trackList
 
 	for i, track in ipairs(trackList) do
 		if track.notes then
