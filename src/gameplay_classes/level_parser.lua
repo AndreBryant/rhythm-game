@@ -49,4 +49,4 @@ local function parse(path)
 	return { success = true, message = "Beatmap JSON parsed successfully.", data = data }
 end
 
-return { parse = parse, convert = function() end }
+return parse
