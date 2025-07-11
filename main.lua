@@ -8,7 +8,13 @@ local convert = xmlParser.convert
 function love.load()
 	local path = "assets/levels_json/test_level.json"
 
-	parse(path)
+	local parsedData = parse(path)
+	local beatMap = parsedData.data
+
+	if parsedData.success and beatMap then
+		print(beatMap.metadata.title)
+	end
+
 	-- game = RhythmGame:new()
 end
 

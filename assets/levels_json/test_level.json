@@ -1,11 +1,11 @@
 {
   "beatMap": {
-    "metaData": {
-      "Title": "Twinkle twinkle Little Star",
-      "Artist": "W.A. Mozart",
-      "BeatMapAuthor": "Andre Bryant",
-      "Difficulty": "Easy",
-      "PPQ": "96"
+    "metadata": {
+      "title": "Twinkle twinkle Little Star",
+      "artist": "W.A. Mozart",
+      "beatMapAuthor": "Andre Bryant",
+      "difficulty": "Easy",
+      "ppq": "96"
     },
     "map": {
       "trackList": [

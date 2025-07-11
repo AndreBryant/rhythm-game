@@ -22,18 +22,22 @@ local function parse(path)
 	-- Handle if love camt find file
 	local content, err = love.filesystem.read(path)
 	if not content then
-		return { status = "not-ok", message = "Failed to read file" .. (err or "unknown error"), data = nil }
+		return { success = false, message = "Failed to read file" .. (err or "unknown error"), data = nil }
 	end
 
 	-- Handle if not a proper JSON format
 	local jsonData = json.decode(content)
 	if not jsonData then
-		return { status = "not-ok", message = "Failed to parse Beatmap JSON data.", data = nil }
+		return { success = false, message = "Failed to parse Beatmap JSON data.", data = nil }
 	end
+
+	local data = { metadata = {}, tracks = {} }
+	local metadata = jsonData.beatMap.metadata
+
+	data.metadata = metadata
 
 	-- Make sure notes are sorted properly in the list
 	local trackList = jsonData.beatMap.map.trackList
-	local data = { tracks = {} }
 
 	for i, track in ipairs(trackList) do
 		if track.notes then
@@ -42,29 +46,7 @@ local function parse(path)
 	end
 	data.tracks = trackList
 
-	-- Debug
-	for i, note in ipairs(data.tracks[1].notes) do
-		print(
-			"Note Type:\t"
-				.. note.type
-				.. "\t"
-				.. "Note Key:\t"
-				.. note.key
-				.. "\t"
-				.. "Note Start:\t"
-				.. note.startMeasure
-				.. ":"
-				.. note.startStep
-				.. "\t"
-				.. "Note End:\t"
-				.. note.endMeasure
-				.. ":"
-				.. note.endStep
-				.. "\t"
-		)
-	end
-
-	return { status = "ok", message = "Beatmap JSON parsed successfully.", data = data }
+	return { success = true, message = "Beatmap JSON parsed successfully.", data = data }
 end
 
 return { parse = parse, convert = function() end }
